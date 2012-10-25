@@ -20,6 +20,7 @@ describe Configulations do
 
     it "loves lazy duck typing" do
       c = Configulations.new
+
       c.server.content_types.should be_a_kind_of Array
       c.server.content_types.length.should == 3
     end

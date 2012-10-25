@@ -24,7 +24,7 @@ class Configulations
     ext         = File.extname(file)
     base        = File.basename(file, ext)
     parser      = parser_for_extname(ext)
-    config_data = parser.send(:load, File.read(file))
+    config_data = MagicHash.new(parser.load(File.read(file)))
 
     if parent
       props.merge!(config_data) if environmental_override?(base)
