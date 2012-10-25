@@ -2,6 +2,7 @@ source "http://rubygems.org"
 
 gem "json_pure", :platform => :jruby
 gem "json", :platform => :ruby_18
+gem "hashie"
 
 group :development do
   gem "rspec", ">= 2.3.0"
